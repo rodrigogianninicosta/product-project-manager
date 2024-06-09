@@ -46,6 +46,7 @@ public class ProductService implements IProductService {
 
         response.setStatusCode(HttpStatus.CREATED);
         response.setContent(Collections.singletonList(productModel));
+
         return response;
     }
 
@@ -56,6 +57,7 @@ public class ProductService implements IProductService {
         productRepository.deleteById(productId);
 
         response.setStatusCode(HttpStatus.NO_CONTENT);
+
         return response;
     }
 
@@ -104,6 +106,7 @@ public class ProductService implements IProductService {
             response.setStatusCode(HttpStatus.OK);
             response.setContent(filteredProductList);
         }
+
         return response;
     }
 }
