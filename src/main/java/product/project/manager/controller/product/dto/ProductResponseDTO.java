@@ -7,8 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
-import product.project.manager.common.dto.DefaultErrorResponseDTO;
-import product.project.manager.controller.product.ProductController;
+import product.project.manager.domain.model.ProductModel;
 
 import java.util.List;
 
@@ -17,11 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ProductListResponseDTO {
+public class ProductResponseDTO {
 
-    private List<ProductController> content;
-
-    private DefaultErrorResponseDTO error;
+    private List<ProductModel> content;
 
     @JsonIgnore private HttpStatus statusCode;
 }

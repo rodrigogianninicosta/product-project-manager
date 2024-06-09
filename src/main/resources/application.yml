@@ -1,6 +1,6 @@
 spring:
   application:
-    name: {APPLICATION_NAME:product-project-manager}
+    name: { APPLICATION_NAME:product-project-manager }
     initial: PPM
   codec:
     max-in-memory-size: 100MB
@@ -9,9 +9,9 @@ spring:
       pageable:
         max-page-size: 1000000
   datasource:
-    url: {POSTGRESDB_URI:jdbc:postgresql://localhost:5432/postgres}
-    username: {POSTGRESDB_USER:postgres}
-    password: {POSTGRESDB_PASSWORD:example}
+    url: { POSTGRESDB_URI:jdbc:postgresql://localhost:5432/postgres }
+    username: { POSTGRESDB_USER:postgres }
+    password: { POSTGRESDB_PASSWORD:example }
   jpa:
     hibernate:
       ddl-auto: update

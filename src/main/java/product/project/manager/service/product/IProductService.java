@@ -1,11 +1,22 @@
 package product.project.manager.service.product;
 
-import com.fasterxml.jackson.databind.JsonNode;
-
 import org.springframework.data.domain.Pageable;
-import product.project.manager.controller.product.dto.ProductListResponseDTO;
+import product.project.manager.controller.product.dto.ProductResponseDTO;
+import product.project.manager.domain.model.ProductModel;
+
+import java.util.UUID;
 
 public interface IProductService {
 
-    ProductListResponseDTO getProductList (Pageable pageable);
+    ProductResponseDTO getProductList (Pageable pageable);
+
+    ProductResponseDTO postProduct (ProductModel product);
+
+    ProductResponseDTO deleteProduct (UUID productId);
+
+    ProductResponseDTO putProduct (ProductModel product);
+
+    ProductResponseDTO getSortProductList (Pageable pageable);
+
+    ProductResponseDTO getFilterProductList (String productName);
 }
